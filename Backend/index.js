@@ -1,30 +1,30 @@
-// const express = require("express");
+const express = require("express");
 
-// const app = express();
+const app = express();
 
-// const PORT = process.env.PORT || 9000;
+const PORT = process.env.PORT || 9000;
 
-// app.listen(PORT, () => {
-//   console.log(`server running on PORT ${PORT}`);
-// });
-
-// app.get("/", (req, res) => {
-//   res.send("<h1>This is meant to be used for react native</h2>");
-// });
-
-const mysql = require("mysql");
-
-let con = mysql.createConnection({
-  host: "localhost",
-  user: "root",
-  password: "ABC123@ ",
-  //   database: "",
+app.listen(PORT, () => {
+  console.log(`server running on PORT ${PORT}`); 
 });
 
-con.connect((err) => {
-  if (err) {
-    throw err;
-  } else {
-    console.log("was successful");
-  }
+app.get("/", (req, res) => {
+  res.send("<h1>This is meant to be used for react native, yah!!!!!!</h2>");
 });
+
+// const mysql = require("mysql");
+
+// let con = mysql.createConnection({
+//   host: "localhost",
+//   user: "root",
+//   password: "ABC123@ ",
+//   //   database: "",
+// });
+
+// con.connect((err) => {
+//   if (err) {
+//     throw err;
+//   } else {
+//     console.log("was successful");
+//   }
+// });
